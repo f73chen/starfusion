@@ -4,6 +4,7 @@ workflow starFusion {
   input {
     Array[Pair[File, File]] inputFqs
     File? chimeric
+    String docker = "g3chen/starfusion:1.0"
   }
 
   ## NOTE: if chimeric file is given, the fastq files will not be used for anything, but are still required arguments.
@@ -18,9 +19,10 @@ workflow starFusion {
   parameter_meta {
     inputFqs: "Array of fastq read pairs"
     chimeric: "Path to Chimeric.out.junction"
+    docker: "Docker container to run the workflow in"
   }
 
-  call runStarFusion { input: fastq1 = fastq1, fastq2 = fastq2, chimeric = chimeric }
+  call runStarFusion { input: fastq1 = fastq1, fastq2 = fastq2, chimeric = chimeric, docker = docker }
 
   output {
     File fusions = runStarFusion.fusionPredictions
@@ -57,6 +59,7 @@ task runStarFusion {
     Int threads = 8
     Int jobMemory = 64
     Int timeout = 72
+    String docker
   }
 
   parameter_meta {
@@ -69,6 +72,7 @@ task runStarFusion {
     threads: "Requested CPU threads"
     jobMemory: "Memory allocated for this job"
     timeout: "Hours before task timeout"
+    docker: "Docker container to run the workflow in"
   }
 
   String outdir = "STAR-Fusion_outdir"
@@ -83,6 +87,7 @@ task runStarFusion {
   >>>
 
   runtime {
+  	docker:  "~{docker}"
     memory:  "~{jobMemory} GB"
     modules: "~{modules}"
     cpu:     "~{threads}"
