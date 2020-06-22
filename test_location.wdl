@@ -4,13 +4,15 @@ workflow test_location {
 
 task find_tools {
     command {
-        ls $MAVIS_ROOT
+        ls $STAR_FUSION_ROOT
         echo "@@@@@@@@@@@@@@@@"
-        ls $PYTHON_ROOT
+        ls $PERL_ROOT
         echo "@@@@@@@@@@@@@@@@"
-        ls $BLAT_ROOT
+        ls $STAR_ROOT
         echo "@@@@@@@@@@@@@@@@"
-        ls $CONDA_ROOT
+        ls $SAMTOOLS_ROOT
+        echo "@@@@@@@@@@@@@@@@"
+        ls $HTSLIB_ROOT
         echo "@@@@@@@@@@@@@@@@"
 
         echo $PATH
@@ -19,7 +21,7 @@ task find_tools {
         echo "################"
         echo $LD_LIBRARY_PATH
         echo "################"
-        echo $PYTHONPATH
+        echo $PERL5LIB
         echo "################"
         echo $PKG_CONFIG_PATH
         echo "################"
@@ -28,6 +30,6 @@ task find_tools {
         String message = read_string(stdout())
     }
     runtime {
-        docker: "g3chen/mavis:1.0"
+        docker: "g3chen/starfusion:1.0"
     }
 }
