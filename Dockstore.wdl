@@ -53,7 +53,8 @@ task runStarFusion {
     Array[File] fastq1
     Array[File] fastq2
     File? chimeric
-    String starFusion = "$STAR_FUSION_ROOT/STAR-Fusion"
+    # String starFusion = "$STAR_FUSION_ROOT/STAR-Fusion"
+    File starFusion = "STAR-Fusion"
     String modules = "star-fusion/1.8.1 star-fusion-genome/1.8.1-hg38"
     String genomeDir = "$STAR_FUSION_GENOME_ROOT/ctat_genome_lib_build_dir"
     Int threads = 8
