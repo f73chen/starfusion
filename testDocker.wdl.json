@@ -1,7 +1,8 @@
 {
   "starFusion.inputFqs": [ 
-   { "Left": "/data/STAR_FUSION_GENOME_ROOT/test_star_fusion/reads_1.fq.gz", "Right": "/data/STAR_FUSION_GENOME_ROOT/test_star_fusion/reads_2.fq.gz" },
-   { "Left": "/data/STAR_FUSION_GENOME_ROOT/test_star_fusion/reads_1.fq.gz", "Right": "/data/STAR_FUSION_GENOME_ROOT/test_star_fusion/reads_2.fq.gz" } ],
-  "starFusion.chimeric": "/data/STAR_FUSION_GENOME_ROOT/test_star_fusion/test.Chimeric.out.junction",
-  "starFusion.runStarFusion.timeout": 1
+   { "Left": "/data/test_star_fusion/reads_1.fq.gz", "Right": "/data/test_star_fusion/reads_2.fq.gz" },
+   { "Left": "/data/test_star_fusion/reads_1.fq.gz", "Right": "/data/test_star_fusion/reads_2.fq.gz" } ],
+  "starFusion.chimeric": "/data/test_star_fusion/test.Chimeric.out.junction",
+  "starFusion.runStarFusion.timeout": 1,
+  "starFusion.runStarFusion.genomeDir": "/data/STAR_FUSION_GENOME_ROOT/ctat_genome_lib_build_dir"
 }
