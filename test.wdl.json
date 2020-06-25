@@ -4,5 +4,6 @@
    { "Left": "/home/ubuntu/Downloads/sample_data/test_star_fusion/reads_1.fq.gz", "Right": "/home/ubuntu/Downloads/sample_data/test_star_fusion/reads_2.fq.gz" } ],
   "starFusion.chimeric": "/home/ubuntu/Downloads/sample_data/test_star_fusion/test.Chimeric.out.junction",
   "starFusion.runStarFusion.timeout": 1,
-  "starFusion.runStarFusion.genomeDir": "/data/STAR_FUSION_GENOME_ROOT/ctat_genome_lib_build_dir"
+  "starFusion.runStarFusion.genomeDir": "/data/STAR_FUSION_GENOME_ROOT/ctat_genome_lib_build_dir",
+  "starFusion.runStarFusion.modules": "star-fusion/1.8.1"
 }
