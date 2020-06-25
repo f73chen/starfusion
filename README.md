@@ -12,6 +12,17 @@ Workflow that takes a fastq pair or optionally a chimeric file from STAR and det
 
 ## Usage
 
+### Dockstore
+Make a runtime JSON template and fill in desired inputs, outputs, and other parameters
+```
+dockstore workflow convert entry2json --entry github.com/f73chen/starfusion/StarFusion:master > Dockstore.json
+vim Dockstore.json
+```
+Run locally
+```
+java -Dconfig.file=local.config -jar $cromwell run starFusion.wdl --inputs test.wdl.json --options options.json
+```
+
 ### Cromwell
 ```
 java -jar cromwell.jar run starFusion.wdl --inputs inputs.json
