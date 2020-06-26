@@ -30,6 +30,7 @@ task find_tools {
         String message = read_string(stdout())
     }
     runtime {
-        docker: "g3chen/starfusion:1.0"
+        docker: "g3chen/starfusion:2.0"
+        modules: "star-fusion/1.8.1"
     }
 }
