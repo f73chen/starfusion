@@ -1,7 +1,0 @@
-{
-  "starFusion.inputFqs": [ 
-   { "Left": "/home/ubuntu/Downloads/sample_data/reads_1.fq.gz", "Right": "/home/ubuntu/Downloads/sample_data/reads_2.fq.gz" },
-   { "Left": "/home/ubuntu/Downloads/sample_data/reads_1.fq.gz", "Right": "/home/ubuntu/Downloads/sample_data/reads_2.fq.gz" } ],
-  "starFusion.chimeric": "/home/ubuntu/Downloads/sample_data/test.Chimeric.out.junction",
-  "starFusion.runStarFusion.timeout": 1
-}
